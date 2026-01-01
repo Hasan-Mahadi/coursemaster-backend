@@ -321,7 +321,7 @@ export const updateQuiz = async (req, res, next) => {
     await delCacheByPattern('quiz:view:*');
     await delCache(`quiz:view:${quiz._id}:student`);
 
-    res.json({ message: 'Quiz updated', quiz });
+    res.json({ message: 'Quiz updatedddddddddddddd', quiz });
   } catch (error) {
     next(error);
   }
