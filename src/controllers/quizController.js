@@ -331,13 +331,13 @@ export const updateQuiz = async (req, res, next) => {
 export const deleteQuiz = async (req, res, next) => {
   try {
     const quiz = await Quiz.findByIdAndDelete(req.params.id);
-    if (!quiz) return res.status(404).json({ message: 'Quiz not found' });
+    if (!quiz) return res.status(404).json({ message: 'Quiz not foundddddddddddddd' });
 
     // ✅ Redis cache invalidate
     await delCacheByPattern('quiz:view:*');
     await delCache(`quiz:view:${quiz._id}:student`);
 
-    res.json({ message: 'Quiz deleted' });
+    res.json({ message: 'Quiz deletedddddddddddd' });
   } catch (error) {
     next(error);
   }
