@@ -67,7 +67,7 @@ export const getQuizForStudent = async (req, res, next) => {
   try {
     const { quizId } = req.params;
     const quiz = await Quiz.findById(quizId).lean();
-    if (!quiz) return res.status(404).json({ message: "Quiz not found" });
+    if (!quiz) return res.status(404).json({ message: "Quiz not founddddddddddd" });
 
     // in quizController.getQuizForStudent (after quiz found)
     const safeQuestions = quiz.questions.map((q) => ({
