@@ -57,7 +57,7 @@ export const createQuiz = async (req, res, next) => {
     if (error.name === "ZodError")
       return res
         .status(400)
-        .json({ message: "Validation error", errors: error.errors });
+        .json({ message: "Validation errorrrrrrrrrrr", errors: error.errors });
     next(error);
   }
 };
