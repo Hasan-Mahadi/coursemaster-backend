@@ -76,7 +76,14 @@ export const getQuizForStudent = async (req, res, next) => {
       marks: q.marks,
       options: q.options.map((opt) => ({ _id: opt._id, text: opt.text })),
     }));
-    const payload = {
+    // const payload = {
+    //   quizId: quiz._id,
+    //   title: quiz.title,
+    //   description: quiz.description,
+    //   timeLimitMinutes: quiz.timeLimitMinutes,
+    //   questions: safeQuestions,
+    // };
+       const payload = {
       quizId: quiz._id,
       title: quiz.title,
       description: quiz.description,
