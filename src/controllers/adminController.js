@@ -15,6 +15,8 @@ import mongoose from 'mongoose';
  */
 export const getDashboardStats = async (req, res, next) => {
   try {
+    // const totalUsers = await User.countDocuments();
+    // const totalCourses = await Course.countDocuments();
     const totalUsers = await User.countDocuments();
     const totalCourses = await Course.countDocuments();
     const totalEnrollments = await Enrollment.countDocuments();
